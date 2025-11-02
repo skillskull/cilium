@@ -22,7 +22,7 @@ kubectl get deployments --all-namespaces
 #start tunnel in host
 kubectl -n kube-system port-forward svc/hubble-ui 12000:80
 #connect via ssh from remote host
-ssh -L 12000:127.0.0.1:12000 user@<cilium-host>
+ssh -L 12000:127.0.0.1:12000 user@cilium-host
 
 
 #gateway api, checar microcurso;
