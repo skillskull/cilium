@@ -17,3 +17,12 @@ cilium connectivity test --request-timeout 30s --connect-timeout 10s
 kubectl get nodes
 kubectl get daemonsets --all-namespaces
 kubectl get deployments --all-namespaces
+
+
+
+#gateway api, checar microcurso;
+
+kubectl apply -f https://github.com/kubernetes-sigs/gateway-api/releases/latest/download/standard-install.yaml
+kubectl get crds | grep gateway
+istioctl install –set profile=default
+kubectl apply -f https://github.com/istio/istio/releases/latest/download/gateway.yaml
