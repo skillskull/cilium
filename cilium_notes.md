@@ -18,6 +18,11 @@ kubectl get nodes
 kubectl get daemonsets --all-namespaces
 kubectl get deployments --all-namespaces
 
+#connect to cilium
+#start tunnel in host
+kubectl -n kube-system port-forward svc/hubble-ui 12000:80
+#connect via ssh from remote host
+ssh -L 12000:127.0.0.1:12000 user@<cilium-host>
 
 
 #gateway api, checar microcurso;
